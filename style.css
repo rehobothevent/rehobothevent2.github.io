@@ -1,0 +1,9 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Add custom hover animation */
+a:hover {
+  transition: color 0.3s ease-in-out;
+}
