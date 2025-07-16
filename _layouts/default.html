@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ page.title }}{% if site.title %} · {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description }}" />
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% include head-custom-google-analytics.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-title">
+          <a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
+        </h1>
+        {% if site.description %}
+          <p class="site-description">{{ site.description }}</p>
+        {% endif %}
+      </div>
+    </header>
+    <main class="site-content wrapper">
+      {{ content }}
+    </main>
+    <footer class="site-footer wrapper">
+      <p>
+        {% if site.show_downloads %}
+          <a href="{{ site.github.zip_url }}">Download ZIP</a>
+        {% endif %}
+        {% if site.show_downloads %}
+          • 
+        {% endif %}
+        <a href="{{ site.github.url }}">View on GitHub</a>
+      </p>
+      <p>Theme: <a href="https://github.com/pages-themes/cayman">Cayman</a></p>
+    </footer>
+  </body>
+</html>
